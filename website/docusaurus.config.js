@@ -13,13 +13,20 @@ module.exports = {
     path.resolve(__dirname, 'plugins', 'appinsights'),
     'docusaurus-node-polyfills'
   ],
+    i18n:
+      defaultLocale = "en",
+      locales: ['en', 'es'],
+      fa: {
+        direction = 'rtl'
+      }
+
   stylesheets: [
     "https://rsms.me/inter/inter.css",
     "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
   ],
   themeConfig: {
     colorMode: {
-      defaultMode: 'light',
+      defaultMode: 'dark',
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
@@ -77,6 +84,10 @@ module.exports = {
           className: 'header-bluesky-link',
           'aria-label': 'Bluesky',
           position: 'right',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right'
         }
       ],
     },
